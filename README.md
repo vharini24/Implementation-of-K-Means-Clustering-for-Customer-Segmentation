@@ -83,6 +83,8 @@ print(df)
 
 ## Output:
 
+<img width="719" height="147" alt="image" src="https://github.com/user-attachments/assets/c88b542d-7de6-42f1-a215-31e6b11bb06c" />
+
 
 
 
