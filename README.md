@@ -79,11 +79,12 @@ plt.show()
 # Step 5: Show dataset with clusters
 # ------------------------------
 print(df)
-
+```
 
 ## Output:
 
-<img width="719" height="147" alt="image" src="https://github.com/user-attachments/assets/c88b542d-7de6-42f1-a215-31e6b11bb06c" />
+<img width="719" height="147" alt="image" src="https://github.com/user-attachments/assets/fa533b1e-cfc0-4786-b223-b2e0fb0292b5" />
+
 
 
 
