@@ -85,7 +85,9 @@ print(df)
 
 <img width="719" height="147" alt="image" src="https://github.com/user-attachments/assets/fa533b1e-cfc0-4786-b223-b2e0fb0292b5" />
 
+<img width="986" height="663" alt="image" src="https://github.com/user-attachments/assets/c0752de9-71c5-4670-95de-f73663b1d1f1" />
 
+<img width="918" height="580" alt="Screenshot 2026-05-23 231907" src="https://github.com/user-attachments/assets/4c121f88-4fb2-42b2-98a9-b0cdfb0ef4f8" />
 
 
 
