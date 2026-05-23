@@ -17,13 +17,80 @@ To write a program to implement the K Means Clustering for Customer Segmentation
 ```
 /*
 Program to implement the K Means Clustering for Customer Segmentation.
-Developed by: 
-RegisterNumber:  
+Developed by: V. HARINI
+RegisterNumber:  212225040113
 */
-```
+
+# Import libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+# ------------------------------
+# Step 1: Load dataset from CSV
+# ------------------------------
+df = pd.read_csv("Mall_Customers.csv")
+
+# Display first 5 rows
+print(df.head())
+
+# ------------------------------
+# Step 2: Select features for clustering
+# ------------------------------
+X = df[['Annual Income (k$)', 'Spending Score (1-100)']]
+
+# ------------------------------
+# Step 3: Apply K-Means
+# ------------------------------
+kmeans = KMeans(n_clusters=3, init='k-means++', random_state=42)
+
+# Fit and predict clusters
+df['Cluster'] = kmeans.fit_predict(X)
+
+# ------------------------------
+# Step 4: Visualize clusters
+# ------------------------------
+plt.figure(figsize=(8,6))
+
+for i in range(3):
+    plt.scatter(
+        X[df['Cluster'] == i]['Annual Income (k$)'],
+        X[df['Cluster'] == i]['Spending Score (1-100)'],
+        label=f'Cluster {i+1}'
+    )
+
+# Plot centroids
+plt.scatter(
+    kmeans.cluster_centers_[:,0],
+    kmeans.cluster_centers_[:,1],
+    s=200,
+    c='yellow',
+    marker='X',
+    label='Centroids'
+)
+
+plt.title('Customer Segmentation (K-Means)')
+plt.xlabel('Annual Income (k$)')
+plt.ylabel('Spending Score (1-100)')
+plt.legend()
+plt.show()
+
+# ------------------------------
+# Step 5: Show dataset with clusters
+# ------------------------------
+print(df)
+
 
 ## Output:
-![K Means Clustering for Customer Segmentation](sam.png)
+
+<img width="718" height="147" alt="image" src="https://github.com/user-attachments/assets/d4e7f595-c379-49e4-982e-5beb42e7bc33" />
+
+<img width="986" height="662" alt="image" src="https://github.com/user-attachments/assets/d7fe3164-bd07-4d6e-a0e3-634c0831d3c8" />
+
+<img width="917" height="580" alt="image" src="https://github.com/user-attachments/assets/5ade6636-9615-4861-af27-68dca3043397" />
+
+
+
 
 
 ## Result:
